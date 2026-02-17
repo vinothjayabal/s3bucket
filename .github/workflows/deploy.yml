@@ -1,0 +1,15 @@
+DeployToS3:
+  Type: AWS::CodePipeline::Pipeline
+  Properties:
+    Stages:
+      - Name: Deploy
+        Actions:
+          - Name: S3Deploy
+            ActionTypeId:
+              Category: Deploy
+              Owner: AWS
+              Provider: S3
+              Version: 1
+            Configuration:
+              BucketName: !Ref MyS3Bucket
+              Extract: true
