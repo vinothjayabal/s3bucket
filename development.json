@@ -1,1 +1,7 @@
-test
+Resources:
+  MyS3Bucket:
+    Type: AWS::S3::Bucket
+    Properties:
+      BucketName: !Sub "${AWS::StackName}-bucket-${AWS::Region}"
+      VersioningConfiguration:
+        Status: Enabled
