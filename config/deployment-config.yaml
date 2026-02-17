@@ -1,0 +1,12 @@
+version: '1.0'
+environments:
+  development:
+    parameters:
+      region: us-west-2
+      bucket_name: myapp-dev
+      instance_type: t2.micro
+  production:
+    parameters:
+      region: us-east-1
+      bucket_name: myapp-prod
+      instance_type: t2.large
