@@ -11,5 +11,5 @@ DeployToS3:
               Provider: S3
               Version: 1
             Configuration:
-              BucketName: !Ref MyS3Bucket
+              BucketName: s3-dynamic
               Extract: true
